@@ -14,6 +14,7 @@ import json
 import re
 import sys
 import os
+from html import escape
 from pathlib import Path
 
 
@@ -39,7 +40,7 @@ with open(json_path, encoding="utf-8") as f:
 
 def pkg_emoji(pkg):
     """Return a standard package emoji regardless of the package name."""
-    return "📦"
+    return "&lt;/&gt;"
 
 # Group patches by package; patches with no compatiblePackages are universal.
 # JSON structure: compatiblePackages is a list of objects with
@@ -66,6 +67,9 @@ for patch in data["patches"]:
             }
         # Deduplicate patches that appear across multiple packages
         if patch["name"] not in by_pkg[pkg]["patches"]:
+            # Attach context for table rendering
+            patch["pkg"] = pkg
+            patch["targets"] = pkg_entry.get("targets", [])
             by_pkg[pkg]["patches"][patch["name"]] = patch
 
 
@@ -77,52 +81,71 @@ def anchor(name):
 def patches_table(patches):
     """Render a sorted markdown table of patches with name, description, and options."""
     rows = [
-        "| 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |",
-        "|----------|----------------|-----------|",
+        "| 📦&nbsp;Package | ⚙️&nbsp;Version | 🩹&nbsp;Patch | 📜&nbsp;Description |",
+        "|---|---|---|---|",
     ]
     for p in sorted(patches, key=lambda x: x["name"]):
         a = anchor(p["name"])
-        options = p.get("options") or []
-        if options:
-            # Show only option titles as a bullet list
-            parts = [opt.get("title") or opt.get("key") or "" for opt in options]
-            opts_cell = "<br>".join(f"• {t}" for t in parts)
+        # options = p.get("options") or []
+        # if options:
+        #     # Show only option titles as a bullet list
+        #     parts = [opt.get("title") or opt.get("key") or "" for opt in options]
+        #     opts_cell = "<br>".join(f"• {t}" for t in parts)
+        # else:
+        #     opts_cell = ""
+        
+        targets = p.get("targets") or []
+        versions = []
+        for target in targets:
+            version = target["version"]
+            if version is None:
+                continue
+            label = f"experimental {version}" if target.get("isExperimental") else version
+            versions.append(label)
+        if not versions:
+            vers = ""
+        vers = " ".join(f"`{escape(version)}`" for version in versions)
+        if versions:
+            vers = " ".join(f"`{escape(v)}`" for v in versions)
         else:
-            opts_cell = ""
+            vers = ""
+
         desc = (p.get("description") or "").replace("\n", "<br>")
-        rows.append(f"| [{p['name']}](#{a}) | {desc} | {opts_cell} |")
+        # rows.append(f"| [{p['name']}](#{a}) | {desc} | {opts_cell} |")
+        package = p.get("pkg") or ""
+        rows.append(f"| {package} | {vers} | [{p['name']}](#{a}) | {desc} |")
     return "\n".join(rows)
 
 
-def versions_table(targets):
-    """Render a markdown table of supported versions.
-    Experimental versions get a 🧪 prefix.
-    Versions with a description get it shown in a second row below.
-    """
-    if not targets:
-        return ""
+# def versions_table(targets):
+#     """Render a markdown table of supported versions.
+#     Experimental versions get a 🧪 prefix.
+#     Versions with a description get it shown in a second row below.
+#     """
+#     if not targets:
+#         return ""
 
-    cells = []
-    for t in targets:
-        ver   = t["version"]
-        if ver is None:
-            continue
-        label = f"🧪&nbsp;{ver}" if t.get("isExperimental") else ver
-        cells.append(label)
+#     cells = []
+#     for t in targets:
+#         ver   = t["version"]
+#         if ver is None:
+#             continue
+#         label = f"🧪&nbsp;{ver}" if t.get("isExperimental") else ver
+#         cells.append(label)
 
-    if not cells:
-        return ""
+#     if not cells:
+#         return ""
 
-    header = "| " + " | ".join(cells) + " |"
-    sep = "| " + " | ".join(":---:" for _ in cells) + " |"
-    rows = [header, sep]
+#     header = "| " + " | ".join(cells) + " |"
+#     sep = "| " + " | ".join(":---:" for _ in cells) + " |"
+#     rows = [header, sep]
 
-    # Optional description row — only rendered if at least one target has one
-    descs = [(t.get("description") or "").replace("\n", "<br>") for t in targets]
-    if any(descs):
-        rows.append("| " + " | ".join(descs) + " |")
+#     # Optional description row — only rendered if at least one target has one
+#     descs = [(t.get("description") or "").replace("\n", "<br>") for t in targets]
+#     if any(descs):
+#         rows.append("| " + " | ".join(descs) + " |")
 
-    return "\n".join(rows)
+#     return "\n".join(rows)
 
 
 def spoiler(label, count, targets, tbl, expanded=False):
@@ -130,22 +153,29 @@ def spoiler(label, count, targets, tbl, expanded=False):
     If expanded=True, the spoiler is open by default (for repos with few patches).
     """
     noun = "patch" if count == 1 else "patches"
-    vtbl = versions_table(targets)
-    versions_section = f"**🎯 Supported versions:**\n\n{vtbl}\n\n" if vtbl else ""
+    # vtbl = versions_table(targets)
+    # versions_section = f"**🎯 Supported versions:**\n\n{vtbl}\n\n" if vtbl else ""
     tag = "<details open>" if expanded else "<details>"
     return f"""{tag}
 <summary>{label}&nbsp;&nbsp;•&nbsp;&nbsp;{count} {noun}</summary>
 <br>
 
-{versions_section}{tbl}
+{tbl}
 
 </details>"""
 
 
+
 def build_content(expanded=False):
     """Build the full generated patches section."""
+    if branch == "main":
+        reltag = "release"
+    else:
+        reltag = "tag"
+
     lines = [
-        f"> **[v{ver}](https://github.com/{owner}/{repo}/releases/tag/v{ver})**"
+        # f"> **[v{ver}](https://github.com/{owner}/{repo}/releases/tag/v{ver})**"
+        f"> **[![GitHub Release](https://img.shields.io/github/v/{reltag}/{owner}/{repo})](https://github.com/{owner}/{repo}/releases/tag/v{ver})**"
         f"&nbsp;&nbsp;•&nbsp;&nbsp;`{branch}`&nbsp;&nbsp;•&nbsp;&nbsp;"
         f"{total} patches total"
     ]

@@ -1,12 +1,11 @@
 # 👋🧩 Morphe Patches template
 
-Template repository for Morphe Patches.
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/wyqtt/wmp/release.yml)
+![GitHub License](https://img.shields.io/github/license/wyqtt/wmp)
 
 ## ❓ About
 
-Patches for apps I like.
-
-<!-- TODO: Update this about section with a brief introduction/summary about this repo and what it offers. -->
+Messing with patching apps with Morphe.
 
 ### How to use these patches
 
