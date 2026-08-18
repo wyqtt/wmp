@@ -1,5 +1,37 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "0.0.0",
-  "patches": []
+  "version": "1.0.0-dev.1",
+  "patches": [
+    {
+      "name": "Pro",
+      "description": "Enable pro",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "org.kustom.widget",
+          "name": "KWGT",
+          "description": null,
+          "apkFileType": null,
+          "appIconColor": "#4CAF50",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "3.82b619510aosp",
+              "versionCodes": {
+                "ARM64_V8A": 382619510,
+                "ARMEABI_V7A": 382619510,
+                "X86_64": 382619510,
+                "X86": 382619510
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    }
+  ]
 }
