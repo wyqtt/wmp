@@ -14,7 +14,17 @@ Click here to add these patches to Morphe: https://morphe.software/add-source?gi
 ## 🩹 Patches list
 
 <!-- PATCHES_START EXPANDED -->
-> **[![GitHub Release](https://img.shields.io/github/v/tag/wyqtt/wmp)](https://github.com/wyqtt/wmp/releases/tag/v1.0.0-dev.1)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;1 patches total
+[![GitHub Release](https://img.shields.io/github/v/tag/wyqtt/wmp)](https://github.com/wyqtt/wmp/releases/tag/v1.0.0-dev.2)&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;2 patches total
+<details open>
+<summary>&lt;/&gt; KLWP&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
+<br>
+
+| 📦&nbsp;Package | ⚙️&nbsp;Version | 🩹&nbsp;Patch | 📜&nbsp;Description |
+|---|---|---|---|
+| org.kustom.wallpaper | `3.82b621115aosp` | [Pro](#pro) | Enable pro |
+
+</details>
+
 <details open>
 <summary>&lt;/&gt; KWGT&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
 <br>
