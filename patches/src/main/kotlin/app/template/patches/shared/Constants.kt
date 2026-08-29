@@ -24,4 +24,13 @@ object Constants {
         )
     )
 
+    val FOLDER_WIDGET_COMPATIBILITY = Compatibility(
+        name = "Folder Widget",
+        packageName = "pub.hanks.appfolderwidget",
+        appIconColor = 0x634FAC,
+        targets = listOf(
+            AppTarget(version = "11.0.2", versionCode = 11020)
+        )
+    )
+
 }
