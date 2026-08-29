@@ -1,3 +1,13 @@
+## [1.0.0-dev.2](https://github.com/wyqtt/wmp/compare/v1.0.0-dev.1...v1.0.0-dev.2) (2026-08-29)
+
+### 🐛 Bug Fixes
+
+* constants ([80fb912](https://github.com/wyqtt/wmp/commit/80fb912522f9a4eca486ee4e2a8249699f71611a))
+
+### ✨ New Features
+
+* add klwp ([6953274](https://github.com/wyqtt/wmp/commit/6953274a78dc482a778574969f0fdf2450514e37))
+
 ## 1.0.0-dev.1 (2026-08-18)
 
 ### ✨ New Features
