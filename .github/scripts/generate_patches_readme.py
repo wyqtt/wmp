@@ -175,7 +175,7 @@ def build_content(expanded=False):
 
     lines = [
         # f"> **[v{ver}](https://github.com/{owner}/{repo}/releases/tag/v{ver})**"
-        f"> **[![GitHub Release](https://img.shields.io/github/v/{reltag}/{owner}/{repo})](https://github.com/{owner}/{repo}/releases/tag/v{ver})**"
+        f"[![GitHub Release](https://img.shields.io/github/v/{reltag}/{owner}/{repo})](https://github.com/{owner}/{repo}/releases/tag/v{ver})"
         f"&nbsp;&nbsp;•&nbsp;&nbsp;`{branch}`&nbsp;&nbsp;•&nbsp;&nbsp;"
         f"{total} patches total"
     ]
