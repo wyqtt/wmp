@@ -15,4 +15,13 @@ object Constants {
         )
     )
 
+    val KLWP_COMPATIBILITY = Compatibility(
+        name = "KLWP",
+        packageName = "org.kustom.wallpaper",
+        appIconColor = 0x4CAF50,
+        targets = listOf(
+            AppTarget(version = "3.82b621115aosp", versionCode = 382621115)
+        )
+    )
+
 }
