@@ -1,3 +1,9 @@
+## [1.0.0-dev.3](https://github.com/wyqtt/wmp/compare/v1.0.0-dev.2...v1.0.0-dev.3) (2026-08-29)
+
+### ✨ New Features
+
+* test folder widgets ([5f49afa](https://github.com/wyqtt/wmp/commit/5f49afadff12000fd68e73524c02afe2d246ca3a))
+
 ## [1.0.0-dev.2](https://github.com/wyqtt/wmp/compare/v1.0.0-dev.1...v1.0.0-dev.2) (2026-08-29)
 
 ### 🐛 Bug Fixes

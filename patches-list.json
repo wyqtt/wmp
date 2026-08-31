@@ -1,7 +1,38 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.0.0-dev.2",
+  "version": "1.0.0-dev.3",
   "patches": [
+    {
+      "name": "Pro",
+      "description": "Enable pro",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "pub.hanks.appfolderwidget",
+          "name": "Folder Widget",
+          "description": null,
+          "apkFileType": null,
+          "appIconColor": "#634FAC",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "11.0.2",
+              "versionCodes": {
+                "ARM64_V8A": 11020,
+                "ARMEABI_V7A": 11020,
+                "X86_64": 11020,
+                "X86": 11020
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
     {
       "name": "Pro",
       "description": "Enable pro",
