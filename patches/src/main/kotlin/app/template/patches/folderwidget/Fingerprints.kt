@@ -5,6 +5,23 @@ import app.morphe.patcher.methodCall
 import app.morphe.patcher.string
 import com.android.tools.smali.dexlib2.AccessFlags
 
+// Utils.<clinit> loads the "cjson" native library which performs integrity checks.
+// No-op the entire static initializer to prevent the native library from loading.
+internal object NativeLibraryLoadFingerprint : Fingerprint(
+    definingClass = "Lcom/android/app/ap/h/Utils;",
+    name = "<clinit>",
+)
+
+// BaseActivity.run(Z, Runnable) is a native method that performs signature verification
+// before executing the Runnable. Bypass it by directly invoking the Runnable.
+internal object NativeRunFingerprint : Fingerprint(
+    definingClass = "Lcom/android/app/ap/h/BaseActivity;",
+    returnType = "V",
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.NATIVE),
+    parameters = listOf("Z", "Ljava/lang/Runnable;"),
+    name = "run",
+)
+
 // Generic SharedPreferences reader: get(String key, Object default) -> Object.
 // Reads from the "ba_sp" prefs. Every pro-feature gate resolves the local pro
 // flag through this single method, so overriding a boolean read here to true
