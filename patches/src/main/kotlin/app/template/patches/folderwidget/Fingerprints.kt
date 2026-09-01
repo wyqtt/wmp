@@ -6,20 +6,37 @@ import app.morphe.patcher.string
 import com.android.tools.smali.dexlib2.AccessFlags
 
 // Utils.<clinit> loads the "cjson" native library which performs integrity checks.
-// No-op the entire static initializer to prevent the native library from loading.
+// Target the clinit to surgically remove the System.loadLibrary("cjson") call.
 internal object NativeLibraryLoadFingerprint : Fingerprint(
     definingClass = "Lcom/android/app/ap/h/Utils;",
     name = "<clinit>",
 )
 
-// BaseActivity.run(Z, Runnable) is a native method that performs signature verification
-// before executing the Runnable. Bypass it by directly invoking the Runnable.
-internal object NativeRunFingerprint : Fingerprint(
-    definingClass = "Lcom/android/app/ap/h/BaseActivity;",
-    returnType = "V",
-    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.NATIVE),
-    parameters = listOf("Z", "Ljava/lang/Runnable;"),
-    name = "run",
+// The method that invokes the native BaseActivity.run(Z, Runnable)V.
+// We'll replace the invoke-virtual call with a direct invoke-interface to Runnable.run()V.
+internal object NativeRunCallerFingerprint : Fingerprint(
+    definingClass = "Lcom/android/app/ap/h/BaseActivity\$initRewardAD\$1;",
+    name = "invokeSuspend",
+)
+
+// Generic SharedPreferences reader: get(String key, Object default) -> Object.
+internal object PrefsGetFingerprint : Fingerprint(
+    returnType = "Ljava/lang/Object;",
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.STATIC),
+    parameters = listOf("Ljava/lang/String;", "Ljava/lang/Object;"),
+    filters = listOf(
+        string("ba_sp"),
+        methodCall(
+            definingClass = "Landroid/content/Context;",
+            name = "getSharedPreferences",
+        ),
+    ),
+)
+
+// User.isAf() -> Z : the account-level "member" flag.
+internal object IsAfFingerprint : Fingerprint(
+    definingClass = "Lcom/android/app/ap/h/user/User;",
+    name = "isAf",
 )
 
 // Generic SharedPreferences reader: get(String key, Object default) -> Object.
