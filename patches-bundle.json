@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-08-29T02:14:22",
-  "description": "## [1.0.0-dev.3](https://github.com/wyqtt/wmp/compare/v1.0.0-dev.2...v1.0.0-dev.3) (2026-08-29)\n\n### ✨ New Features\n\n* test folder widgets ([5f49afa](https://github.com/wyqtt/wmp/commit/5f49afadff12000fd68e73524c02afe2d246ca3a))",
-  "download_url": "https://github.com/wyqtt/wmp/releases/download/v1.0.0-dev.3/patches-1.0.0-dev.3.mpp",
+  "created_at": "2026-08-31T16:29:02",
+  "description": "## [1.0.0-dev.4](https://github.com/wyqtt/wmp/compare/v1.0.0-dev.3...v1.0.0-dev.4) (2026-08-31)\n\n### 🐛 Bug Fixes\n\n* folder widget ([791bda7](https://github.com/wyqtt/wmp/commit/791bda77f70a64cb5cdb59144054a3d942efbddd))",
+  "download_url": "https://github.com/wyqtt/wmp/releases/download/v1.0.0-dev.4/patches-1.0.0-dev.4.mpp",
   "signature_download_url": "",
-  "version": "1.0.0-dev.3"
+  "version": "1.0.0-dev.4"
 }
