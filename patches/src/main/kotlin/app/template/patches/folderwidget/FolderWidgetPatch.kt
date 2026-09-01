@@ -4,8 +4,6 @@ import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.removeInstruction
 import app.morphe.patcher.extensions.InstructionExtensions.replaceInstruction
 import app.morphe.patcher.patch.bytecodePatch
-import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
-import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction21c
 import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction35c
 import wy.morphe.patches.shared.Constants.FOLDER_WIDGET_COMPATIBILITY
 
@@ -18,28 +16,14 @@ val folderWidgetPatch = bytecodePatch(
 
     execute {
         // Bypass native integrity: remove System.loadLibrary("cjson") from Utils.<clinit>
-        NativeLibraryLoadFingerprint.method.apply {
-            val instructions = implementation!!.instructions.toList()
+        NativeLibraryLoadFingerprint.let {
+            val stringIndex = it.instructionMatches[0].index  // const-string "cjson"
+            val loadLibIndex = it.instructionMatches[1].index  // invoke-static System.loadLibrary
 
-            // Find const-string "cjson" followed by invoke-static System.loadLibrary
-            var loadLibraryIndex = -1
-            for (i in 0 until instructions.size - 1) {
-                val insn = instructions[i]
-                val nextInsn = instructions[i + 1]
-
-                if (insn is Instruction21c &&
-                    insn.opcode.name == "CONST_STRING" &&
-                    insn.reference.toString() == "cjson" &&
-                    nextInsn.opcode.name.startsWith("INVOKE_STATIC")) {
-                    loadLibraryIndex = i
-                    break
-                }
-            }
-
-            if (loadLibraryIndex >= 0) {
-                // Remove both instructions: const-string + invoke-static
-                removeInstruction(loadLibraryIndex + 1)  // Remove invoke-static first
-                removeInstruction(loadLibraryIndex)      // Then const-string
+            it.method.apply {
+                // Remove in reverse order to preserve indices
+                removeInstruction(loadLibIndex)
+                removeInstruction(stringIndex)
             }
         }
 

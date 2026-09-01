@@ -10,6 +10,13 @@ import com.android.tools.smali.dexlib2.AccessFlags
 internal object NativeLibraryLoadFingerprint : Fingerprint(
     definingClass = "Lcom/android/app/ap/h/Utils;",
     name = "<clinit>",
+    filters = listOf(
+        string("cjson"),
+        methodCall(
+            definingClass = "Ljava/lang/System;",
+            name = "loadLibrary",
+        ),
+    ),
 )
 
 // The method that invokes the native BaseActivity.run(Z, Runnable)V.
