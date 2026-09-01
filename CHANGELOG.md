@@ -1,3 +1,9 @@
+## [1.0.0-dev.5](https://github.com/wyqtt/wmp/compare/v1.0.0-dev.4...v1.0.0-dev.5) (2026-09-01)
+
+### 🐛 Bug Fixes
+
+* folder widget ([5cc39c2](https://github.com/wyqtt/wmp/commit/5cc39c21e2700f60fa08f357515f04840ba2327c))
+
 ## [1.0.0-dev.4](https://github.com/wyqtt/wmp/compare/v1.0.0-dev.3...v1.0.0-dev.4) (2026-08-31)
 
 ### 🐛 Bug Fixes
