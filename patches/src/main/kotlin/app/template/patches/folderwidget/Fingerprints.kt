@@ -20,26 +20,6 @@ internal object NativeRunCallerFingerprint : Fingerprint(
 )
 
 // Generic SharedPreferences reader: get(String key, Object default) -> Object.
-internal object PrefsGetFingerprint : Fingerprint(
-    returnType = "Ljava/lang/Object;",
-    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.STATIC),
-    parameters = listOf("Ljava/lang/String;", "Ljava/lang/Object;"),
-    filters = listOf(
-        string("ba_sp"),
-        methodCall(
-            definingClass = "Landroid/content/Context;",
-            name = "getSharedPreferences",
-        ),
-    ),
-)
-
-// User.isAf() -> Z : the account-level "member" flag.
-internal object IsAfFingerprint : Fingerprint(
-    definingClass = "Lcom/android/app/ap/h/user/User;",
-    name = "isAf",
-)
-
-// Generic SharedPreferences reader: get(String key, Object default) -> Object.
 // Reads from the "ba_sp" prefs. Every pro-feature gate resolves the local pro
 // flag through this single method, so overriding a boolean read here to true
 // unlocks the whole app. Disambiguated from the sibling setter (returns V) by
