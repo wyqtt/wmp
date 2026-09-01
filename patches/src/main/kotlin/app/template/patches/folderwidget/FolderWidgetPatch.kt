@@ -27,6 +27,35 @@ val folderWidgetPatch = bytecodePatch(
             }
         }
 
+        // No-op all calls to the native Utils.json(Context) method to prevent UnsatisfiedLinkError
+        classDefForEach { classDef ->
+            classDef.methods.forEach { method ->
+                val implementation = method.implementation ?: return@forEach
+                val instructions = implementation.instructions.toList()
+
+                val jsonCallIndices = mutableListOf<Int>()
+                instructions.forEachIndexed { index, insn ->
+                    if (insn is Instruction35c &&
+                        insn.opcode.name.startsWith("INVOKE_VIRTUAL") &&
+                        insn.reference.toString().contains("Utils;->json(Landroid/content/Context;)V")) {
+                        jsonCallIndices.add(index)
+                    }
+                }
+
+                if (jsonCallIndices.isNotEmpty()) {
+                    val mutableClass by lazy { mutableClassDefBy(classDef) }
+                    val mutableMethod = mutableClass.methods.first {
+                        it.name == method.name && it.returnType == method.returnType
+                    }
+
+                    // Remove instructions in reverse order to preserve indices
+                    jsonCallIndices.reversed().forEach { index ->
+                        mutableMethod.removeInstruction(index)
+                    }
+                }
+            }
+        }
+
         // Replace BaseActivity.run() call with direct Runnable.run()
         NativeRunCallerFingerprint.method.apply {
             val instructions = implementation!!.instructions.toList()
