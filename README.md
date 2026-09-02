@@ -17,7 +17,7 @@ Click here to add these patches to Morphe: https://morphe.software/add-source?gi
 ## 🩹 Patches list
 
 <!-- PATCHES_START EXPANDED -->
-[![GitHub Release](https://img.shields.io/github/v/tag/wyqtt/wmp)](https://github.com/wyqtt/wmp/releases/tag/v1.0.0-dev.11)![dev](https://img.shields.io/badge/dev-orange)![4 patches total](https://img.shields.io/badge/4-patches_total-grey?labelColor=blue)
+[![GitHub Release](https://img.shields.io/github/v/tag/wyqtt/wmp)](https://github.com/wyqtt/wmp/releases/tag/v1.0.0-dev.12)&nbsp;![dev](https://img.shields.io/badge/dev-orange)&nbsp;![4 patches total](https://img.shields.io/badge/4-patches_total-grey?labelColor=blue)
 <details open>
 <summary>&lt;/&gt; App Finder&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
 <br>
