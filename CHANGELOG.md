@@ -1,3 +1,9 @@
+## [1.0.0-dev.13](https://github.com/wyqtt/wmp/compare/v1.0.0-dev.12...v1.0.0-dev.13) (2026-09-02)
+
+### 🐛 Bug Fixes
+
+* app finder ([d74be78](https://github.com/wyqtt/wmp/commit/d74be78613e191e14c76c423e50a783d60a48857))
+
 ## [1.0.0-dev.12](https://github.com/wyqtt/wmp/compare/v1.0.0-dev.11...v1.0.0-dev.12) (2026-09-02)
 
 ### 🐛 Bug Fixes
