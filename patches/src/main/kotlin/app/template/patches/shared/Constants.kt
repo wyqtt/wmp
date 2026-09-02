@@ -9,7 +9,7 @@ object Constants {
     val KWGT_COMPATIBILITY = Compatibility(
         name = "KWGT",
         packageName = "org.kustom.widget",
-        appIconColor = 0x4CAF50,
+        appIconColor = 0x3476B6,
         targets = listOf(
             AppTarget(version = "3.82b619510aosp", versionCode = 382619510)
         )
@@ -18,7 +18,7 @@ object Constants {
     val KLWP_COMPATIBILITY = Compatibility(
         name = "KLWP",
         packageName = "org.kustom.wallpaper",
-        appIconColor = 0x4CAF50,
+        appIconColor = 0xbf2f4a,
         targets = listOf(
             AppTarget(version = "3.82b621115aosp", versionCode = 382621115)
         )
@@ -30,6 +30,15 @@ object Constants {
         appIconColor = 0x634FAC,
         targets = listOf(
             AppTarget(version = "11.0.2", versionCode = 11020)
+        )
+    )
+
+    val APP_FINDER_COMPATIBILITY = Compatibility(
+        name = "App Finder",
+        packageName = "scadica.aq",
+        appIconColor = 0x2196F3,
+        targets = listOf(
+            AppTarget(version = "1.5.1", versionCode = 169)
         )
     )
 

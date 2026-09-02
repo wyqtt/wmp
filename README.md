@@ -5,7 +5,10 @@
 
 ## ❓ About
 
-Messing with patching apps with Morphe.
+Messing around with patching apps with Morphe. I don't know much and I'm just experimenting, it's not great.
+
+> [!WARNING]
+> Some patches created with AI assistance.
 
 ### How to use these patches
 
