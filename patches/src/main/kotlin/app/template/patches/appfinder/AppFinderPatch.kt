@@ -13,12 +13,9 @@ val appFinderPatch = bytecodePatch(
     compatibleWith(APP_FINDER_COMPATIBILITY)
 
     execute {
-        // Target the getB() method which returns subscription status
+        // Patch getB() to always return true
         PremiumCheckFingerprint.method.apply {
-            // Remove all existing instructions (iget-boolean + return)
             removeInstructions(0, implementation!!.instructions.size)
-
-            // Add new instructions that always return true
             addInstructions(
                 0,
                 """
@@ -27,5 +24,11 @@ val appFinderPatch = bytecodePatch(
                 """.trimIndent(),
             )
         }
+
+        // Patch setB() to do nothing (prevent billing system from setting it to false)
+        PremiumSetFingerprint.method.addInstructions(
+            0,
+            "return-void",
+        )
     }
 }

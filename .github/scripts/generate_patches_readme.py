@@ -182,7 +182,7 @@ def build_content(expanded=False):
         # f"&nbsp;&nbsp;•&nbsp;&nbsp;`{branch}`&nbsp;&nbsp;•&nbsp;&nbsp;"
         # f"{total} patches total"
         f"[![GitHub Release](https://img.shields.io/github/v/{reltag}/{owner}/{repo})](https://github.com/{owner}/{repo}/releases/tag/v{ver})"
-        f"![{branch}](https://img.shields.io/badge/{branch}-{badgecolor})"
+        f"&nbsp;![{branch}](https://img.shields.io/badge/{branch}-{badgecolor})&nbsp;"
         f"![{total} patches total](https://img.shields.io/badge/{total}-patches_total-grey?labelColor=blue)"
     ]
 

@@ -9,3 +9,11 @@ internal object PremiumCheckFingerprint : Fingerprint(
     returnType = "Z",
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
 )
+
+internal object PremiumSetFingerprint : Fingerprint(
+    definingClass = "Lscadica/aq/UU;",
+    name = "setB",
+    returnType = "V",
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+    parameters = listOf("Z"),
+)
