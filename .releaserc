@@ -12,7 +12,7 @@
         "releaseRules": [
             { "type": "fix", "release": "patch" },
             { "type": "feat", "release": "minor" },
-            { "type": "bump", "release": "patch" },
+            { "type": "bump", "release": "minor" },
             { "type": "perf", "release": "patch" },
             { "type": "build", "scope": "Needs bump", "release": "patch" }
         ]

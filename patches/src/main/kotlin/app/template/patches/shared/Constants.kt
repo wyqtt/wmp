@@ -38,7 +38,8 @@ object Constants {
         packageName = "scadica.aq",
         appIconColor = 0x242424,
         targets = listOf(
-            AppTarget(version = "1.5.1", versionCode = 168)
+            AppTarget(version = "1.5.1", versionCode = 168),
+            AppTarget(version = "1.5.1", versionCode = 169)
         )
     )
 
