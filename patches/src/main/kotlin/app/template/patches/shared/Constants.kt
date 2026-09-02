@@ -36,7 +36,7 @@ object Constants {
     val APP_FINDER_COMPATIBILITY = Compatibility(
         name = "App Finder",
         packageName = "scadica.aq",
-        appIconColor = 0x2196F3,
+        appIconColor = 0x242424,
         targets = listOf(
             AppTarget(version = "1.5.1", versionCode = 169)
         )

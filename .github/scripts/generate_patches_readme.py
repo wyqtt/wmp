@@ -172,11 +172,17 @@ def build_content(expanded=False):
         reltag = "release"
     else:
         reltag = "tag"
+    if branch == "main":
+        badgecolor = "brightgreen"
+    else:
+        badgecolor = "orange"
 
     lines = [
         # f"> **[v{ver}](https://github.com/{owner}/{repo}/releases/tag/v{ver})**"
+        # f"&nbsp;&nbsp;•&nbsp;&nbsp;`{branch}`&nbsp;&nbsp;•&nbsp;&nbsp;"
+        # f"{total} patches total"
         f"[![GitHub Release](https://img.shields.io/github/v/{reltag}/{owner}/{repo})](https://github.com/{owner}/{repo}/releases/tag/v{ver})"
-        f"&nbsp;&nbsp;•&nbsp;&nbsp;`{branch}`&nbsp;&nbsp;•&nbsp;&nbsp;"
+        f"![{branch}](https://img.shields.io/badge/{branch}-{badgecolor})"
         f"{total} patches total"
     ]
 
