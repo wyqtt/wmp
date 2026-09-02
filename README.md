@@ -17,7 +17,17 @@ Click here to add these patches to Morphe: https://morphe.software/add-source?gi
 ## 🩹 Patches list
 
 <!-- PATCHES_START EXPANDED -->
-[![GitHub Release](https://img.shields.io/github/v/tag/wyqtt/wmp)](https://github.com/wyqtt/wmp/releases/tag/v1.0.0-dev.9)&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;3 patches total
+[![GitHub Release](https://img.shields.io/github/v/tag/wyqtt/wmp)](https://github.com/wyqtt/wmp/releases/tag/v1.0.0-dev.10)&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;4 patches total
+<details open>
+<summary>&lt;/&gt; App Finder&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
+<br>
+
+| 📦&nbsp;Package | ⚙️&nbsp;Version | 🩹&nbsp;Patch | 📜&nbsp;Description |
+|---|---|---|---|
+| scadica.aq | `1.5.1` | [Pro](#pro) | Enable pro. |
+
+</details>
+
 <details open>
 <summary>&lt;/&gt; Folder Widget&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
 <br>

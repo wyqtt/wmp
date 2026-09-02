@@ -1,7 +1,38 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.0.0-dev.9",
+  "version": "1.0.0-dev.10",
   "patches": [
+    {
+      "name": "Pro",
+      "description": "Enable pro.",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "scadica.aq",
+          "name": "App Finder",
+          "description": null,
+          "apkFileType": null,
+          "appIconColor": "#2196F3",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "1.5.1",
+              "versionCodes": {
+                "ARM64_V8A": 169,
+                "ARMEABI_V7A": 169,
+                "X86_64": 169,
+                "X86": 169
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
     {
       "name": "Pro",
       "description": "Enable pro",
@@ -44,7 +75,7 @@
           "name": "KLWP",
           "description": null,
           "apkFileType": null,
-          "appIconColor": "#4CAF50",
+          "appIconColor": "#BF2F4A",
           "signatures": null,
           "targets": [
             {
@@ -75,7 +106,7 @@
           "name": "KWGT",
           "description": null,
           "apkFileType": null,
-          "appIconColor": "#4CAF50",
+          "appIconColor": "#3476B6",
           "signatures": null,
           "targets": [
             {
