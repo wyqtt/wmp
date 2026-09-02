@@ -18,7 +18,7 @@ object Constants {
     val KLWP_COMPATIBILITY = Compatibility(
         name = "KLWP",
         packageName = "org.kustom.wallpaper",
-        appIconColor = 0xbf2f4a,
+        appIconColor = 0xBF2F4A,
         targets = listOf(
             AppTarget(version = "3.82b621115aosp", versionCode = 382621115)
         )
@@ -38,7 +38,7 @@ object Constants {
         packageName = "scadica.aq",
         appIconColor = 0x242424,
         targets = listOf(
-            AppTarget(version = "1.5.1", versionCode = 169)
+            AppTarget(version = "1.5.1", versionCode = 168)
         )
     )
 

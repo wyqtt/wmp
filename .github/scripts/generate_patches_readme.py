@@ -183,7 +183,7 @@ def build_content(expanded=False):
         # f"{total} patches total"
         f"[![GitHub Release](https://img.shields.io/github/v/{reltag}/{owner}/{repo})](https://github.com/{owner}/{repo}/releases/tag/v{ver})"
         f"![{branch}](https://img.shields.io/badge/{branch}-{badgecolor})"
-        f"{total} patches total"
+        f"![{total} patches total](https://img.shields.io/badge/{total}-patches_total-grey?labelColor=blue)"
     ]
 
     # One spoiler per app, in the order they appear in the JSON
