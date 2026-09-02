@@ -13,22 +13,16 @@ val appFinderPatch = bytecodePatch(
     compatibleWith(APP_FINDER_COMPATIBILITY)
 
     execute {
-        // Patch getB() to always return true
-        PremiumCheckFingerprint.method.apply {
+        // Patch getF() to return 100 (0x64) - the maximum feature level
+        FeatureLevelFingerprint.method.apply {
             removeInstructions(0, implementation!!.instructions.size)
             addInstructions(
                 0,
                 """
-                    const/4 v0, 0x1
+                    const/16 v0, 0x64
                     return v0
                 """.trimIndent(),
             )
         }
-
-        // Patch setB() to do nothing (prevent billing system from setting it to false)
-        PremiumSetFingerprint.method.addInstructions(
-            0,
-            "return-void",
-        )
     }
 }
