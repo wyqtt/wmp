@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-09-02T11:15:23",
-  "description": "## [1.0.0-dev.10](https://github.com/wyqtt/wmp/compare/v1.0.0-dev.9...v1.0.0-dev.10) (2026-09-02)\n\n### 🐛 Bug Fixes\n\n* app finder ([abd00ce](https://github.com/wyqtt/wmp/commit/abd00ce0f749ff356100baefb3e4d9e8d9a037d9))\n\n### ✨ New Features\n\n* add app finder ([5e5ed71](https://github.com/wyqtt/wmp/commit/5e5ed71b9f6bbd3045b65831c37330f14116525f))",
-  "download_url": "https://github.com/wyqtt/wmp/releases/download/v1.0.0-dev.10/patches-1.0.0-dev.10.mpp",
+  "created_at": "2026-09-02T12:02:05",
+  "description": "## [1.0.0-dev.11](https://github.com/wyqtt/wmp/compare/v1.0.0-dev.10...v1.0.0-dev.11) (2026-09-02)\n\n### 🐛 Bug Fixes\n\n* app finder ([6e6403e](https://github.com/wyqtt/wmp/commit/6e6403e40bbad352adf9f27e2789a7b0cca3e022))\n* app finder ([faa26ae](https://github.com/wyqtt/wmp/commit/faa26ae8802d9659387019daad5839ae3825c63f))",
+  "download_url": "https://github.com/wyqtt/wmp/releases/download/v1.0.0-dev.11/patches-1.0.0-dev.11.mpp",
   "signature_download_url": "",
-  "version": "1.0.0-dev.10"
+  "version": "1.0.0-dev.11"
 }

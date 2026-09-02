@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.0.0-dev.10",
+  "version": "1.0.0-dev.11",
   "patches": [
     {
       "name": "Pro",
@@ -13,16 +13,16 @@
           "name": "App Finder",
           "description": null,
           "apkFileType": null,
-          "appIconColor": "#2196F3",
+          "appIconColor": "#242424",
           "signatures": null,
           "targets": [
             {
               "version": "1.5.1",
               "versionCodes": {
-                "ARM64_V8A": 169,
-                "ARMEABI_V7A": 169,
-                "X86_64": 169,
-                "X86": 169
+                "ARM64_V8A": 168,
+                "ARMEABI_V7A": 168,
+                "X86_64": 168,
+                "X86": 168
               },
               "isExperimental": false,
               "minSdk": null,
