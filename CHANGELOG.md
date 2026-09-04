@@ -1,3 +1,10 @@
+## [1.0.0-dev.14](https://github.com/wyqtt/wmp/compare/v1.0.0-dev.13...v1.0.0-dev.14) (2026-09-04)
+
+### 🚀 Updated App Support
+
+* app finder 1.5.1 169 ([7e95d14](https://github.com{context.owner}/wmp/commit/7e95d148ec0994a4ae3c8efa034d73b68e797c82), [664b214](https://github.com{context.owner}/wmp/commit/664b214f2f230ac0948037548f1a24988aff7700))
+* app finder v1.5.1 169 ([5bb0a2c](https://github.com{context.owner}/wmp/commit/5bb0a2c6d899cb23fa2cb6528bb502b529af223c))
+
 ## [1.0.0-dev.13](https://github.com/wyqtt/wmp/compare/v1.0.0-dev.12...v1.0.0-dev.13) (2026-09-02)
 
 ### 🐛 Bug Fixes
