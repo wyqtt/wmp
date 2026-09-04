@@ -17,12 +17,34 @@ Click here to add these patches to Morphe: https://morphe.software/add-source?gi
 ## 🩹 Patches list
 
 <!-- PATCHES_START EXPANDED -->
-[![GitHub Release](https://img.shields.io/github/v/tag/wyqtt/wmp)](https://github.com/wyqtt/wmp/releases/tag/v1.0.0-dev.14)&nbsp;![dev](https://img.shields.io/badge/dev-orange)&nbsp;![4 patches total](https://img.shields.io/badge/4-patches_total-grey?labelColor=blue)
+[![GitHub Release](https://img.shields.io/github/v/tag/wyqtt/wmp)](https://github.com/wyqtt/wmp/releases/tag/v1.0.0-dev.15)&nbsp;![dev](https://img.shields.io/badge/dev-orange)&nbsp;![8 patches total](https://img.shields.io/badge/8-patches_total-grey?labelColor=blue)
+<details open>
+<summary>&lt;/&gt; Lawnicons&nbsp;&nbsp;•&nbsp;&nbsp;2 patches</summary>
+<br>
+
+| 📦&nbsp;Package | ⚙️&nbsp;Versions | 🩹&nbsp;Patch | 📜&nbsp;Description |
+|---|---|---|---|
+| app.lawnchair.lawnicons.play | `2.18.0` | [Clone App](#clone-app) | Clone Lawnicons by changing the package name. Appends ".ext" by default. |
+| app.lawnchair.lawnicons.play | `2.18.0` | [Extended Icons](#extended-icons) | Add exisiting icons to apps without them. |
+
+</details>
+
+<details open>
+<summary>&lt;/&gt; Lawnicons (Play Store)&nbsp;&nbsp;•&nbsp;&nbsp;2 patches</summary>
+<br>
+
+| 📦&nbsp;Package | ⚙️&nbsp;Versions | 🩹&nbsp;Patch | 📜&nbsp;Description |
+|---|---|---|---|
+| app.lawnchair.lawnicons.play | `2.18.0` | [Clone App](#clone-app) | Clone Lawnicons by changing the package name. Appends ".ext" by default. |
+| app.lawnchair.lawnicons.play | `2.18.0` | [Extended Icons](#extended-icons) | Add exisiting icons to apps without them. |
+
+</details>
+
 <details open>
 <summary>&lt;/&gt; App Finder&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
 <br>
 
-| 📦&nbsp;Package | ⚙️&nbsp;Version | 🩹&nbsp;Patch | 📜&nbsp;Description |
+| 📦&nbsp;Package | ⚙️&nbsp;Versions | 🩹&nbsp;Patch | 📜&nbsp;Description |
 |---|---|---|---|
 | scadica.aq | `1.5.1` | [Pro](#pro) | Enable pro. |
 
@@ -32,7 +54,7 @@ Click here to add these patches to Morphe: https://morphe.software/add-source?gi
 <summary>&lt;/&gt; Folder Widget&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
 <br>
 
-| 📦&nbsp;Package | ⚙️&nbsp;Version | 🩹&nbsp;Patch | 📜&nbsp;Description |
+| 📦&nbsp;Package | ⚙️&nbsp;Versions | 🩹&nbsp;Patch | 📜&nbsp;Description |
 |---|---|---|---|
 | pub.hanks.appfolderwidget | `11.0.2` | [Pro](#pro) | Enable pro |
 
@@ -42,7 +64,7 @@ Click here to add these patches to Morphe: https://morphe.software/add-source?gi
 <summary>&lt;/&gt; KLWP&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
 <br>
 
-| 📦&nbsp;Package | ⚙️&nbsp;Version | 🩹&nbsp;Patch | 📜&nbsp;Description |
+| 📦&nbsp;Package | ⚙️&nbsp;Versions | 🩹&nbsp;Patch | 📜&nbsp;Description |
 |---|---|---|---|
 | org.kustom.wallpaper | `3.82b621115aosp` | [Pro](#pro) | Enable pro |
 
@@ -52,7 +74,7 @@ Click here to add these patches to Morphe: https://morphe.software/add-source?gi
 <summary>&lt;/&gt; KWGT&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
 <br>
 
-| 📦&nbsp;Package | ⚙️&nbsp;Version | 🩹&nbsp;Patch | 📜&nbsp;Description |
+| 📦&nbsp;Package | ⚙️&nbsp;Versions | 🩹&nbsp;Patch | 📜&nbsp;Description |
 |---|---|---|---|
 | org.kustom.widget | `3.82b619510aosp` | [Pro](#pro) | Enable pro |
 

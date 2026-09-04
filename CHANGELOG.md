@@ -1,3 +1,9 @@
+## [1.0.0-dev.15](https://github.com/wyqtt/wmp/compare/v1.0.0-dev.14...v1.0.0-dev.15) (2026-09-04)
+
+### ✨ New Features
+
+* add lawnicons v2.18.0 ([e889af9](https://github.com{context.owner}/wmp/commit/e889af93e44e44f1f863f1febf73a76bdf16bd26))
+
 ## [1.0.0-dev.14](https://github.com/wyqtt/wmp/compare/v1.0.0-dev.13...v1.0.0-dev.14) (2026-09-04)
 
 ### 🚀 Updated App Support
