@@ -40,12 +40,21 @@ object Constants {
         appIconColor = 0x242424,
         targets = listOf(
             AppTarget(
-                version = "1.5.1", 
+                version = "1.5.1",
                 versionCodes = mapOf(
                     SupportedAbi.ARM64_V8A to 168,   // Play Store
                     SupportedAbi.ARMEABI_V7A to 169  // App Site
                 )
             )
+        )
+    )
+
+    val LAWNICONS_COMPATIBILITY = Compatibility(
+        name = "Lawnicons",
+        packageName = "app.lawnchair.lawnicons",
+        appIconColor = 0x10D072,
+        targets = listOf(
+            AppTarget(version = "2.18.0", versionCode = 26)
         )
     )
 

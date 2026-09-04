@@ -81,7 +81,7 @@ def anchor(name):
 def patches_table(patches):
     """Render a sorted markdown table of patches with name, description, and options."""
     rows = [
-        "| 📦&nbsp;Package | ⚙️&nbsp;Version | 🩹&nbsp;Patch | 📜&nbsp;Description |",
+        "| 📦&nbsp;Package | ⚙️&nbsp;Versions | 🩹&nbsp;Patch | 📜&nbsp;Description |",
         "|---|---|---|---|",
     ]
     for p in sorted(patches, key=lambda x: x["name"]):
