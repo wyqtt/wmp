@@ -22,7 +22,7 @@ val lawniconsExtIconsPatch = resourcePatch(
                 "Format: component|drawable|name\n\n" +
                 "Examples:\n" +
                 "com.example.app/com.example.MainActivity|my_icon|My App\n" +
-                "com.test.app/.LauncherActivity|test_icon|Test App\n\n" +
+                "com.test.app/.LauncherActivity|another_icon|Other App\n\n" +
                 "The component format is: package/activity (same as in appfilter.xml)\n" +
                 "The drawable must match an existing icon name in Lawnicons\n" +
                 "The name is the display label for the icon mapping"
