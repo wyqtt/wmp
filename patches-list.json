@@ -140,7 +140,7 @@
         {
           "key": "ext_icons",
           "title": "Ext Icon Entries",
-          "description": "Add exisiting icons to apps without them (one per line or semicolon-separated).\n\nFormat: component|drawable|name\n\nExamples:\ncom.example.app/com.example.MainActivity|my_icon|My App\ncom.test.app/.LauncherActivity|test_icon|Test App\n\nThe component format is: package/activity (same as in appfilter.xml)\nThe drawable must match an existing icon name in Lawnicons\nThe name is the display label for the icon mapping",
+          "description": "Add exisiting icons to apps without them (one per line or semicolon-separated).\n\nFormat: component|drawable|name\n\nExamples:\ncom.example.app/com.example.MainActivity|my_icon|My App\ncom.test.app/.LauncherActivity|another_icon|Other App\n\nThe component format is: package/activity (same as in appfilter.xml)\nThe drawable must match an existing icon name in Lawnicons\nThe name is the display label for the icon mapping",
           "required": false,
           "type": "kotlin.String",
           "default": "",
