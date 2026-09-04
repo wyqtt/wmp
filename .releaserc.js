@@ -1,12 +1,12 @@
-{
-  "branches": [
+module.exports = {
+  branches: [
     "main",
     {
       "name": "dev",
       "prerelease": true
     }
   ],
-  "plugins": [
+  plugins: [
     [
         "@semantic-release/commit-analyzer", {
         "releaseRules": [
@@ -29,8 +29,30 @@
                 { "type": "perf", "section": "🔧 Improvements",  "hidden": false },
                 { "type": "build", "hidden": true }
             ]
+        },
+        "writerOpts": {
+          finalizeContext: (context) => {
+            context.commitGroups.forEach((group) => {
+              const uniqueCommits = new Map();
+              group.commits.forEach((commit) => {
+                const key = commit.subject;
+                if (!uniqueCommits.has(key)) {
+                  uniqueCommits.set(key, {
+                    ...commit,
+                    allLinks: [`[${commit.shortHash}](https://github.com{context.owner}/${context.repository}/commit/${commit.hash})`]
+                  });
+                } else {
+                  const existing = uniqueCommits.get(key);
+                  existing.allLinks.push(`[${commit.shortHash}](https://github.com{context.owner}/${context.repository}/commit/${commit.hash})`);
+                }
+              });
+              group.commits = Array.from(uniqueCommits.values());
+            });
+            return context;
+          },
+          commitPartial: '* {{subject}} ({{#each allLinks}}{{{this}}}{{#unless @last}}, {{/unless}}{{/each}})\n'
         }
-        }
+      }
     ],
     [
       "@MorpheApp/changelog", {

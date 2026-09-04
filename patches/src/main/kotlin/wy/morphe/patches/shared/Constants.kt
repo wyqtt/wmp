@@ -3,6 +3,7 @@ package wy.morphe.patches.shared
 import app.morphe.patcher.patch.ApkFileType
 import app.morphe.patcher.patch.AppTarget
 import app.morphe.patcher.patch.Compatibility
+import app.morphe.patcher.patch.SupportedAbi
 
 object Constants {
     
@@ -38,7 +39,13 @@ object Constants {
         packageName = "scadica.aq",
         appIconColor = 0x242424,
         targets = listOf(
-            AppTarget(version = "1.5.1", versionCode = 168, 169)
+            AppTarget(
+                version = "1.5.1", 
+                versionCodes = mapOf(
+                    SupportedAbi.ARM64_V8A to 168,   // Play Store
+                    SupportedAbi.ARMEABI_V7A to 169  // App Site
+                )
+            )
         )
     )
 

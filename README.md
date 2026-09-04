@@ -8,7 +8,7 @@
 Messing around with patching apps with Morphe. I don't know much and I'm just experimenting, it's not great.
 
 > [!WARNING]
-> Some patches created with AI assistance.
+> This is me experimenting with Morphe & AI & learning how to really use Github at the same time. I don't know a lot, expect issues if you use anything. 
 
 ### How to use these patches
 
