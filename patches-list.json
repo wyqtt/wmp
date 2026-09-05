@@ -1,5 +1,274 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "0.0.0",
-  "patches": []
+  "version": "1.0.0-dev.15",
+  "patches": [
+    {
+      "name": "Clone App",
+      "description": "Clone Lawnicons by changing the package name. Appends \".ext\" by default.",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "app.lawnchair.lawnicons",
+          "name": "Lawnicons",
+          "description": null,
+          "apkFileType": null,
+          "appIconColor": "#10D072",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "2.18.0",
+              "versionCodes": {
+                "ARM64_V8A": 26,
+                "ARMEABI_V7A": 26,
+                "X86_64": 26,
+                "X86": 26
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "packageName": "app.lawnchair.lawnicons.play",
+          "name": "Lawnicons (Play Store)",
+          "description": null,
+          "apkFileType": null,
+          "appIconColor": "#10D072",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "2.18.0",
+              "versionCodes": {
+                "ARM64_V8A": 26,
+                "ARMEABI_V7A": 26,
+                "X86_64": 26,
+                "X86": 26
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": [
+        {
+          "key": "packageName",
+          "title": "Package name",
+          "description": "The package name for the cloned app. Default appends \".ext\" to app.lawnchair.lawnicons",
+          "required": true,
+          "type": "kotlin.String",
+          "default": "Default",
+          "values": {
+            "Default": "Default"
+          }
+        },
+        {
+          "key": "updatePermissions",
+          "title": "Update permissions",
+          "description": "Update compatibility receiver permissions. Enabling this can fix installation errors, but this can also break features in certain apps.",
+          "required": false,
+          "type": "kotlin.Boolean",
+          "default": false,
+          "values": null
+        },
+        {
+          "key": "updateProviders",
+          "title": "Update providers",
+          "description": "Update provider names declared by the app. Enabling this can fix installation errors, but this can also break features in certain apps.",
+          "required": false,
+          "type": "kotlin.Boolean",
+          "default": false,
+          "values": null
+        }
+      ]
+    },
+    {
+      "name": "Extended Icons",
+      "description": "Add exisiting icons to apps without them.",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "app.lawnchair.lawnicons",
+          "name": "Lawnicons",
+          "description": null,
+          "apkFileType": null,
+          "appIconColor": "#10D072",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "2.18.0",
+              "versionCodes": {
+                "ARM64_V8A": 26,
+                "ARMEABI_V7A": 26,
+                "X86_64": 26,
+                "X86": 26
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "packageName": "app.lawnchair.lawnicons.play",
+          "name": "Lawnicons (Play Store)",
+          "description": null,
+          "apkFileType": null,
+          "appIconColor": "#10D072",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "2.18.0",
+              "versionCodes": {
+                "ARM64_V8A": 26,
+                "ARMEABI_V7A": 26,
+                "X86_64": 26,
+                "X86": 26
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": [
+        {
+          "key": "ext_icons",
+          "title": "Ext Icon Entries",
+          "description": "Add exisiting icons to apps without them (one per line or semicolon-separated).\n\nFormat: component|drawable|name\n\nExamples:\ncom.example.app/com.example.MainActivity|my_icon|My App\ncom.test.app/.LauncherActivity|another_icon|Other App\n\nThe component format is: package/activity (same as in appfilter.xml)\nThe drawable must match an existing icon name in Lawnicons\nThe name is the display label for the icon mapping",
+          "required": false,
+          "type": "kotlin.String",
+          "default": "",
+          "values": null
+        }
+      ]
+    },
+    {
+      "name": "Pro",
+      "description": "Enable pro.",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "scadica.aq",
+          "name": "App Finder",
+          "description": null,
+          "apkFileType": null,
+          "appIconColor": "#242424",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "1.5.1",
+              "versionCodes": {
+                "ARM64_V8A": 168,
+                "ARMEABI_V7A": 169
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Pro",
+      "description": "Enable pro",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "pub.hanks.appfolderwidget",
+          "name": "Folder Widget",
+          "description": null,
+          "apkFileType": null,
+          "appIconColor": "#634FAC",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "11.0.2",
+              "versionCodes": {
+                "ARM64_V8A": 11020,
+                "ARMEABI_V7A": 11020,
+                "X86_64": 11020,
+                "X86": 11020
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Pro",
+      "description": "Enable pro",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "org.kustom.wallpaper",
+          "name": "KLWP",
+          "description": null,
+          "apkFileType": null,
+          "appIconColor": "#BF2F4A",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "3.82b621115aosp",
+              "versionCodes": {
+                "ARM64_V8A": 382621115,
+                "ARMEABI_V7A": 382621115,
+                "X86_64": 382621115,
+                "X86": 382621115
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Pro",
+      "description": "Enable pro",
+      "default": true,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "org.kustom.widget",
+          "name": "KWGT",
+          "description": null,
+          "apkFileType": null,
+          "appIconColor": "#3476B6",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "3.82b619510aosp",
+              "versionCodes": {
+                "ARM64_V8A": 382619510,
+                "ARMEABI_V7A": 382619510,
+                "X86_64": 382619510,
+                "X86": 382619510
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    }
+  ]
 }
