@@ -14,6 +14,17 @@
 ### 🐛 Bug Fixes
 
 * lawnicons ([15fce5e](https://github.com{context.owner}/wmp/commit/15fce5e21208ad3d867ab15b3eb3a906997514bf))
+* mismatched versions ([e8fc2d4](https://github.com{context.owner}/wmp/commit/e8fc2d4dd7a86dfa21a10afd59c0931dfed84354), [a7e55eb](https://github.com{context.owner}/wmp/commit/a7e55eb360000e9b520b5ef8b2cffecb9586299c))
+
+### ✨ New Features
+
+* add lawnicons v2.18.0 ([e889af9](https://github.com{context.owner}/wmp/commit/e889af93e44e44f1f863f1febf73a76bdf16bd26))
+
+## [1.0.0-dev.15](https://github.com/wyqtt/wmp/compare/v1.0.0-dev.14...v1.0.0-dev.15) (2026-09-05)
+
+### 🐛 Bug Fixes
+
+* lawnicons ([15fce5e](https://github.com{context.owner}/wmp/commit/15fce5e21208ad3d867ab15b3eb3a906997514bf))
 * mismatched versions ([a7e55eb](https://github.com{context.owner}/wmp/commit/a7e55eb360000e9b520b5ef8b2cffecb9586299c))
 
 ### ✨ New Features
